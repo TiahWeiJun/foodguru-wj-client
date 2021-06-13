@@ -11,6 +11,7 @@ const AddPostModal = ({ username }) => {
     file,
     setFile,
     createPost,
+    refetchPosts,
   } = useHomePageContext();
 
   const [fileError, setFileError] = useState(null);
@@ -61,7 +62,8 @@ const AddPostModal = ({ username }) => {
       if (response.data.createPost.id) {
         form.resetFields();
         setAddPostModal(false);
-        window.location.reload(true);
+        refetchPosts();
+        // window.location.reload(true);
       }
     } catch (err) {
       console.log(err);

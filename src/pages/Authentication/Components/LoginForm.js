@@ -2,11 +2,14 @@ import React from "react";
 import { Form, Input, Button } from "antd";
 import { LockOutlined, MailOutlined } from "@ant-design/icons";
 import { useAuthPageContext } from "../AuthContainer";
+import { useHistory } from "react-router-dom";
 
 const LoginForm = () => {
   const [form] = Form.useForm();
 
   const { login } = useAuthPageContext();
+
+  const history = useHistory();
 
   const handleLogIn = async (values) => {
     try {
@@ -18,8 +21,7 @@ const LoginForm = () => {
         localStorage.setItem("AccessToken", response.data.login.token);
         localStorage.setItem("user", JSON.stringify(response.data.login));
         const name = response.data.login.username;
-        // history.push();
-        window.location.replace(`/${name}/home`);
+        history.push(`/${name}/home`);
       }
     } catch (err) {
       console.log(err);
