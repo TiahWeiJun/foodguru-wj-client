@@ -1,7 +1,7 @@
 import React from "react";
 import { Tag } from "antd";
 import { useHomePageContext } from "../HomeContainer";
-import { HeartFilled, DeleteFilled } from "@ant-design/icons";
+import { HeartFilled } from "@ant-design/icons";
 import { cuisine_colors } from "./helpers";
 import halalLogo from "../../../images/halal.jfif";
 import locationLogo from "../../../images/location.png";
