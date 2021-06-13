@@ -13,22 +13,22 @@ const Post = ({ post }) => {
   const {
     id,
     generalLocation,
-    address,
+    // address,
     cuisine,
     nameOfHawkerCenter,
     nameOfShop,
     nameOfFood,
-    description,
+    // description,
     imageURL,
     createdAt,
-    likes,
+    // likes,
     likeCount,
-    username,
+    // username,
     isHalal,
     isAirCon,
-    type,
+    // type,
     price,
-    filterString,
+    // filterString,
   } = post;
 
   const { setDetailedPost, setPostInfo } = useHomePageContext();

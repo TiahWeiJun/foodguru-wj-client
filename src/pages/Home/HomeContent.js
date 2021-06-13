@@ -28,6 +28,7 @@ const Home = () => {
     ) {
       return post;
     }
+    return null;
   });
 
   let item;
@@ -48,6 +49,7 @@ const Home = () => {
             if (filterValues[item].every((val) => post[item].includes(val))) {
               return post;
             }
+            return null;
           }
         );
         continue;

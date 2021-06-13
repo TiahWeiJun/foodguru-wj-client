@@ -56,13 +56,13 @@ const PostModal = () => {
     nameOfFood,
     description,
     imageURL,
-    createdAt,
+    // createdAt,
     likes,
     likeCount,
     username,
     isHalal,
     isAirCon,
-    type,
+    // type,
     price,
   } = postData?.getPost;
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { Drawer } from "antd";
 import { useHomePageContext } from "../HomeContainer";
-import { Form, Select, Checkbox, Slider, Radio } from "antd";
+import { Form, Select, Slider, Radio } from "antd";
 import { generalLocations, cuisines, types } from "../Components/helpers";
 
 const DrawerFilter = () => {
