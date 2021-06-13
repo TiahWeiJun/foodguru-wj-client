@@ -5,7 +5,9 @@ import { ApolloProvider } from "@apollo/client/react";
 import { createUploadLink } from "apollo-upload-client";
 import { setContext } from "@apollo/client/link/context";
 
-const httpLink = createUploadLink({ uri: "http://localhost:5000/graphql" });
+const httpLink = createUploadLink({
+  uri: `http://foodguru-wj.herokuapp.com/graphql`,
+}); //localhost:5000
 
 const authLink = setContext((_, { headers }) => {
   // get the authentication token from local storage if it exists
