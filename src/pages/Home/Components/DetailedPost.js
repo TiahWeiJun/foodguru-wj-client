@@ -169,7 +169,7 @@ const PostModal = () => {
 
           <div className="md:w-1/2">
             <img
-              className="h-48 md:h-96 rounded-sm "
+              className="h-48 md:h-96 w-full rounded-sm "
               src={imageURL}
               alt="food"
             />
@@ -282,9 +282,9 @@ const PostModal = () => {
 
             <hr className="border-none h-0.5 bg-gray-300" />
 
-            <div className="mt-2 h-5/6 flex flex-col justify-between">
+            <div className="mt-2 h-40 flex flex-col justify-between">
               <div className="h-full overflow-auto">{description}</div>
-              <div className="flex justify-end">
+              <div className="flex justify-end mt-2">
                 {user && checkLiked(user.username) ? (
                   <div
                     className="hover:text-orange cursor-pointer"
