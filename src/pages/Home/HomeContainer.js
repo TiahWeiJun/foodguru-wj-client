@@ -23,6 +23,7 @@ export const HomeContainer = ({ children }) => {
   const [openDrawer, setOpenDrawer] = useState(false);
   const [filterValues, setFilterValues] = useState(null);
   const [popOver, setPopOver] = useState(false);
+  const [buttonLoading, setButtonLoading] = useState(false);
 
   const [uploadImage] = useMutation(UPLOAD_FILE, {
     onCompleted: (data) => console.log(data),
@@ -79,6 +80,8 @@ export const HomeContainer = ({ children }) => {
         popOver,
         setPopOver,
         deletePost,
+        buttonLoading,
+        setButtonLoading,
       }}
     >
       {children}

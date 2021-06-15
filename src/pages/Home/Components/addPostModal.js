@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Modal, Form, Input, Select, Radio, Slider } from "antd";
+import { Modal, Form, Input, Select, Radio, Slider, Button } from "antd";
 import { useHomePageContext } from "../HomeContainer";
 import { generalLocations, cuisines, types } from "./helpers";
 
@@ -12,6 +12,8 @@ const AddPostModal = ({ username }) => {
     setFile,
     createPost,
     refetchPosts,
+    buttonLoading,
+    setButtonLoading,
   } = useHomePageContext();
 
   const [fileError, setFileError] = useState(null);
@@ -47,6 +49,7 @@ const AddPostModal = ({ username }) => {
   };
 
   const handleAddPost = async () => {
+    setButtonLoading(true);
     const values = await form.validateFields();
     const imageURL = await handleUpload();
     if (!imageURL) return;
@@ -63,6 +66,7 @@ const AddPostModal = ({ username }) => {
       if (response.data.createPost.id) {
         form.resetFields();
         setAddPostModal(false);
+        setButtonLoading(false);
         refetchPosts();
         // window.location.reload(true);
       }
@@ -74,10 +78,20 @@ const AddPostModal = ({ username }) => {
   return (
     <Modal
       title="Add A New Food Post!"
-      okText="Add"
       visible={addPostModal}
       onCancel={() => setAddPostModal(false)}
-      onOk={handleAddPost}
+      // onOk={handleAddPost}
+      footer={[
+        <Button onClick={() => setAddPostModal(false)}>Cancel</Button>,
+        <Button
+          key="submit"
+          type="primary"
+          loading={buttonLoading}
+          onClick={handleAddPost}
+        >
+          Add Post
+        </Button>,
+      ]}
     >
       <Form form={form} layout="vertical" requiredMark={false}>
         <Form.Item
