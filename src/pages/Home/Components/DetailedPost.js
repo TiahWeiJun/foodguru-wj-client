@@ -267,15 +267,25 @@ const PostModal = () => {
                 </div>
               </div>
 
-              <div className="flex items-start mt-2">
+              <div className="flex items-start mt-2 ">
                 <img src={foodLogo} alt="food" width={20} />
-                <div className="my-0 ml-2">
-                  <span>
-                    <strong>MUST TRY!!!</strong>
-                  </span>
-                  <p>
-                    {nameOfFood} ~ ${price}
-                  </p>
+                <div className="my-0 ml-2 w-full flex justify-between">
+                  <div>
+                    <span>
+                      <strong>MUST TRY!!!</strong>
+                    </span>
+                    <p>
+                      {nameOfFood} ~ ${price}
+                    </p>
+                  </div>
+                  <div className="">
+                    <a
+                      href={`http://www.google.com/search?q=${nameOfShop}`}
+                      className="hover:text-orange"
+                    >
+                      Google it
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
