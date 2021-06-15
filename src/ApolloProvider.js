@@ -6,7 +6,7 @@ import { createUploadLink } from "apollo-upload-client";
 import { setContext } from "@apollo/client/link/context";
 
 const httpLink = createUploadLink({
-  uri: `https://foodguru-wj.herokuapp.com/graphql`,
+  uri: `http://localhost:5000/graphql`,
 }); //localhost:5000
 
 const authLink = setContext((_, { headers }) => {

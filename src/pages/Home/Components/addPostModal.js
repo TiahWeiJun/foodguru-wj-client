@@ -38,6 +38,7 @@ const AddPostModal = ({ username }) => {
     }
 
     const res = await uploadImage({ variables: { file } });
+
     try {
       return res.data.uploadFile.url;
     } catch (err) {
