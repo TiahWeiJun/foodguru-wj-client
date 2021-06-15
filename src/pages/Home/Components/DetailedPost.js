@@ -281,7 +281,7 @@ const PostModal = () => {
                   <div className="">
                     <a
                       href={`http://www.google.com/search?q=${nameOfShop}`}
-                      className="hover:text-orange"
+                      className="text-blue-600 hover:text-orange"
                     >
                       Google it
                     </a>
