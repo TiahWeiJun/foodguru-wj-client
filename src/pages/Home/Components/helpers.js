@@ -10,6 +10,7 @@ export const cuisines = [
   "Indonesian",
   "Vegetarian",
   "Middle Eastern",
+  "Spanish",
 ].sort();
 
 export const types = [
