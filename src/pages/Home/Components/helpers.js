@@ -11,6 +11,8 @@ export const cuisines = [
   "Vegetarian",
   "Middle Eastern",
   "Spanish",
+  "Taiwanese",
+  "Italian",
 ].sort();
 
 export const types = [
@@ -36,6 +38,8 @@ export const cuisine_colors = {
   Vegetarian: "green",
   "Middle Eastern": "cyan",
   Spanish: "#f58142",
+  Taiwanese: "#fcd703",
+  Italian: "#fc033d",
 };
 
 const locations = [

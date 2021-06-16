@@ -120,7 +120,7 @@ const PostModal = () => {
           setPostInfo(null);
           setDetailedPost(false);
         }}
-        closable={false}
+        closable={true}
         width={mq.matches ? 700 : 350}
         bodyStyle={{ padding: 15 }}
       >
@@ -136,7 +136,7 @@ const PostModal = () => {
                 <span>{username}</span>
               </div>
               {user && username === user.username ? (
-                <div className="cursor-pointer">
+                <div className="cursor-pointer mr-9">
                   <Popover
                     placement="bottomRight"
                     content={
@@ -187,7 +187,7 @@ const PostModal = () => {
                   <span>{username}</span>
                 </div>
                 {user && username === user.username ? (
-                  <div className="cursor-pointer">
+                  <div className="cursor-pointer mr-9">
                     <Popover
                       placement="bottomRight"
                       content={
@@ -270,7 +270,7 @@ const PostModal = () => {
               <div className="flex items-start mt-2 ">
                 <img src={foodLogo} alt="food" width={20} />
                 <div className="my-0 ml-2 w-full flex justify-between">
-                  <div>
+                  <div className="w-9/12">
                     <span>
                       <strong>MUST TRY!!!</strong>
                     </span>
@@ -281,7 +281,7 @@ const PostModal = () => {
                   <div className="">
                     <a
                       href={`http://www.google.com/search?q=${nameOfShop}`}
-                      className="text-blue-600 hover:text-orange"
+                      className="text-blue-600 text-center hover:text-orange"
                     >
                       Google it
                     </a>

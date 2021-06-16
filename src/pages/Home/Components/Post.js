@@ -37,7 +37,7 @@ const Post = ({ post }) => {
 
   return (
     <div
-      class="ui card w-72 h-96 rounded-sm bg-white m-3 cursor-pointer"
+      class="ui card w-72 h-96 rounded-sm bg-white m-3 cursor-pointer mb-8"
       onClick={() => {
         setPostInfo(id);
         setDetailedPost(true);
