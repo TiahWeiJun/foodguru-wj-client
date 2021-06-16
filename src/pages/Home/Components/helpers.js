@@ -35,6 +35,7 @@ export const cuisine_colors = {
   Indonesian: "pink",
   Vegetarian: "green",
   "Middle Eastern": "cyan",
+  Spanish: "#f58142",
 };
 
 const locations = [
