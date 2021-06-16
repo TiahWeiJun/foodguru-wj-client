@@ -32,7 +32,7 @@ const PostModal = () => {
   if (!postData) {
     return (
       <Modal
-        title="Basic Modal"
+        title=""
         visible={detailedPost}
         footer={null}
         onCancel={() => {
