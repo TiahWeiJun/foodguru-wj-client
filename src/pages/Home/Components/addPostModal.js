@@ -51,12 +51,14 @@ const AddPostModal = ({ username }) => {
   const handleAddPost = async () => {
     const values = await form.validateFields();
 
+    setButtonLoading(true);
     const imageURL = await handleUpload();
     if (!imageURL) {
+      setButtonLoading(false);
       setFileError("Please upload an image file");
       return;
     }
-    setButtonLoading(true);
+
     const postInput = {
       ...values,
       imageURL,
